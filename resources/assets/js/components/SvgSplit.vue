@@ -11,39 +11,39 @@
         </div>
         <pre id="raw">{{ stats }}</pre>
     </div>
-    <axis-label
-            v-for="(stat, index) in stats"
-            :stat="stat"
-            :index="index"
-            :total="stats.length">
-    </axis-label>
+    <!--<axis-label-->
+            <!--v-for="(stat, index) in stats"-->
+            <!--:stat="stat"-->
+            <!--:index="index"-->
+            <!--:total="stats.length">-->
+    <!--</axis-label>-->
 
 </template>
 
 <script>
-    export default {
-        el: '#demo',
-        data: {
-            newLabel: '',
-            stats: stats
-        },
-        methods: {
-            add: function (e) {
-                e.preventDefault()
-                if (!this.newLabel) return
-                this.stats.push({
-                    label: this.newLabel,
-                    value: 100
-                })
-                this.newLabel = ''
-            },
-            remove: function (stat) {
-                if (this.stats.length > 3) {
-                    this.stats.splice(this.stats.indexOf(stat), 1)
-                } else {
-                    alert('Can\'t delete more!')
-                }
-            }
-        }
-    }
+//    export default {
+//        el: '#demo',
+//        data: {
+//            newLabel: '',
+//            stats: stats
+//        },
+//        methods: {
+//            add: function (e) {
+//                e.preventDefault()
+//                if (!this.newLabel) return
+//                this.stats.push({
+//                    label: this.newLabel,
+//                    value: 100
+//                })
+//                this.newLabel = ''
+//            },
+//            remove: function (stat) {
+//                if (this.stats.length > 3) {
+//                    this.stats.splice(this.stats.indexOf(stat), 1)
+//                } else {
+//                    alert('Can\'t delete more!')
+//                }
+//            }
+//        }
+//    }
 </script>
